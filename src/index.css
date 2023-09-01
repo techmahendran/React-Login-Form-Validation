@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: lightcyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 95vmin;
+  background-color: #fff;
+  border: 1px solid #d2c2c2;
+  border-radius: 18px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0px 0px 22px 1px gray;
+}
+
+.banner {
+  text-align: center;
+  margin: 0;
+}
+.error_msg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: red;
+  font-size: 18px;
+  padding: 8px 0;
+}
+.error_msg p {
+  margin: 0;
+}
+.input_box {
+  position: relative;
+}
+.input_box label {
+  font-size: 18px;
+}
+.input_box input {
+  width: 100%;
+  padding: 18px 15px;
+  font-size: 25px;
+  outline: none;
+  margin: 8px 0;
+  border: 1px solid #a49898;
+  border-radius: 10px;
+}
+.input_box input::placeholder {
+  font-size: 17px;
+}
+.input_box .fa-eye-slash,
+.fa-eye {
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  font-size: 20px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+form .btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: blue;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+}
+form .btn:disabled {
+  opacity: 0.4;
+}
+form .btn:not(:disabled) {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.success-msg {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  width: 80vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 18px 13px 0px lightgrey;
+  position: absolute;
+  top: -500px;
+  transition: all 0.4s ease-in-out;
+}
+
+.success-msg i {
+  font-size: 40px;
+  background-color: green;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 50%;
+}
+.success-msg h1 {
+  margin: 10px 0px 0px 0px;
+}
+.success-msg p {
+  text-align: center;
+}
+
+.success-msg .succes_btn {
+  padding: 0.5rem;
+  background-color: green;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.success-msg.active {
+  top: -80px;
+}
+.match-password p {
+  margin: 0;
+}
+.match-password {
+  background-color: red;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.match-password.success {
+  background-color: green;
+}
+.match-password.error {
+  background-color: red;
+}
+
+@media (max-width: 500px) {
+  .success-msg.active {
+    top: 48px;
+  }
+}
